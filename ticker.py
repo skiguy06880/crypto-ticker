@@ -115,7 +115,6 @@ class Ticker(Frame):
         graphics.DrawText(
             canvas, font_change, change_x, 10, change_color, asset['change_24h']
         )
-        graphics.DrawText(canvas, font_change, 3,20, ticker_color, asset['name'])
 
         return canvas
 
