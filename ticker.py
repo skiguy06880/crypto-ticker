@@ -103,13 +103,14 @@ class Ticker(Frame):
             if asset['change_24h'].startswith('-')
             else graphics.Color(46, 139, 87)
         )
+        ticker_color = graphics.Color(0,0,255)
 
         # Load a smaller font to andle 6-figure asset prices
         if len(asset['price']) > 10:
             font_price.LoadFont('fonts/5x8.bdf')
 
         # Draw the elements on the canvas
-        graphics.DrawText(canvas, font_symbol, 3, 12, main_color, asset['symbol'])
+        graphics.DrawText(canvas, font_symbol, 3, 12, ticker_color, asset['symbol'])
         graphics.DrawText(canvas, font_price, 3, 28, main_color, asset['price'])
         graphics.DrawText(
             canvas, font_change, change_x, 10, change_color, asset['change_24h']
