@@ -97,7 +97,7 @@ class Ticker(Frame):
         change_x = 62 - change_width
 
         # Get colors
-        main_color = graphics.Color(255, 255, 0)
+        main_color = graphics.Color(255, 207, 127)
         change_color = (
             graphics.Color(194, 24, 7)
             if asset['change_24h'].startswith('-')
@@ -114,7 +114,7 @@ class Ticker(Frame):
 
         # Draw the elements on the canvas
         graphics.DrawText(canvas, font_symbol, 2, 12, ticker_color, asset['symbol'].upper())
-        graphics.DrawText(canvas, font_price, 2, 28, ticker_color, asset['price'])
+        graphics.DrawText(canvas, font_price, 2, 28, main_color, asset['price'])
         graphics.DrawText(
             canvas, font_change, change_x, 10, change_color, asset['change_24h']
         )
