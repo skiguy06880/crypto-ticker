@@ -113,7 +113,7 @@ class Ticker(Frame):
         #Line insert
 
         # Draw the elements on the canvas
-        graphics.DrawText(canvas, font_symbol, 2, 10, ticker_color, asset['symbol'].upper())
+        graphics.DrawText(canvas, font_symbol, 2, 12, ticker_color, asset['symbol'].upper())
         graphics.DrawText(canvas, font_price, 2, 28, ticker_color, asset['price'])
         graphics.DrawText(
             canvas, font_change, change_x, 10, change_color, asset['change_24h']
