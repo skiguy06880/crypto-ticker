@@ -104,6 +104,7 @@ class Ticker(Frame):
             else graphics.Color(46, 139, 87)
         )
         ticker_color = graphics.Color(126, 186, 181)
+        line_color = graphics.Color(105, 105, 105)
 
         # Load a smaller font to andle 6-figure asset prices
         if len(asset['price']) > 10:
@@ -117,8 +118,8 @@ class Ticker(Frame):
         graphics.DrawText(
             canvas, font_change, change_x, 10, change_color, asset['change_24h']
         )
-        graphics.DrawLine(canvas, 24, 1, 24, 14, main_color)
-        graphics.DrawLine(canvas, 1, 14, 64, 14, main_color)
+        graphics.DrawLine(canvas, 27, 1, 27, 15, line_color)
+        graphics.DrawLine(canvas, 1, 15, 64, 15, line_color)
 
 
         return canvas
