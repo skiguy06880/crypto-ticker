@@ -83,6 +83,8 @@ class Ticker(Frame):
         # Create fonts for displaying prices
         font_symbol = graphics.Font()
         font_symbol.LoadFont('fonts/7x13.bdf')
+        font_symbol = font_symbol.toUpperCase()
+
 
         font_price = graphics.Font()
         font_price.LoadFont('fonts/6x12.bdf')
