@@ -185,7 +185,7 @@ class CoinGecko(PriceAPI):
 
             price_data.append(
                 dict(
-                    symbol=self.symbol_map[coin_id], price=price, change_24h=change_24h, name=name
+                    symbol=self.symbol_map[coin_id], price=price, change_24h=change_24h,
                 )
             )
 
