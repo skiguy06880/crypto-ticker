@@ -103,7 +103,7 @@ class Ticker(Frame):
             if asset['change_24h'].startswith('-')
             else graphics.Color(46, 139, 87)
         )
-        ticker_color = graphics.Color(0,0,255)
+        ticker_color = graphics.Color(0, 0, 255)
 
         # Load a smaller font to andle 6-figure asset prices
         if len(asset['price']) > 10:
