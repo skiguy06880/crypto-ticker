@@ -108,6 +108,8 @@ class Ticker(Frame):
         # Load a smaller font to andle 6-figure asset prices
         if len(asset['price']) > 10:
             font_price.LoadFont('fonts/5x8.bdf')
+            
+        #Line insert
 
         # Draw the elements on the canvas
         graphics.DrawText(canvas, font_symbol, 2, 10, ticker_color, asset['symbol'].upper())
@@ -115,7 +117,7 @@ class Ticker(Frame):
         graphics.DrawText(
             canvas, font_change, change_x, 10, change_color, asset['change_24h']
         )
-        graphics.DrawLine(canvas, 1, 36, 36, 36, ticker_color)
+        graphics.DrawLine(canvas, 10, 10, 0, 10, ticker_color)
 
         return canvas
 
